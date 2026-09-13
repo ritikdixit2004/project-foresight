@@ -43,8 +43,8 @@ def clean_calendar(cal):
     cal = cal.copy()
     cal["date"] = pd.to_datetime(cal["date"])
     cal = cal.drop_duplicates(subset=["date"])
-    cal["holiday"] = cal["holiday"].fillna("None")
-    cal["promotion_event"] = cal["promotion_event"].fillna("None")
+    cal["holiday"] = cal["holiday"].fillna("No Holiday")
+    cal["promotion_event"] = cal["promotion_event"].fillna("No Promotion")
     return cal
 
 def clean_inventory(inv):
